@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes import router as api_router
 
-app = FastAPI(title="Cafeteria", version="1.0.0")
+app = FastAPI(title="Cafeteria", version="1.0.0", root_path="/api")
 
 _origens = os.getenv(
     "FRONTEND_URLS",
