@@ -1,0 +1,16 @@
+# Variáveis de ambiente (não commitar)
+.env
+.env.local
+.env.*.local
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/.env.local

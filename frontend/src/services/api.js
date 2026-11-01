@@ -1,7 +1,7 @@
-const API_URL = "http://localhost:8000/pedidos";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export async function listarPedidos() {
-  const response = await fetch(`${API_URL}/`);
+  const response = await fetch(`${API_URL}/pedidos/`);
   if (!response.ok) {
     throw new Error("Erro ao buscar ");
   }
@@ -9,7 +9,7 @@ export async function listarPedidos() {
 }
 
 export async function criarPedido(dados) {
-  const response = await fetch(`${API_URL}/`, {
+  const response = await fetch(`${API_URL}/pedidos/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export async function criarPedido(dados) {
 }
 
 export async function buscarPedido(id) {
-  const response = await fetch(`${API_URL}/${id}`);
+  const response = await fetch(`${API_URL}/pedidos/${id}`);
   if (!response.ok) {
     throw new Error("Erro ao buscar pedido");
   }
@@ -32,7 +32,7 @@ export async function buscarPedido(id) {
 }
 
 export async function atualizarPedido(id, dados) {
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${API_URL}/pedidos/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export async function atualizarPedido(id, dados) {
 }
 
 export async function excluirPedido(id) {
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${API_URL}/pedidos/${id}`, {
     method: "DELETE",
   });
   if (!response.ok) {
