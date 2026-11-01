@@ -1,0 +1,29 @@
+[
+    {
+        "id": 2,
+        "cliente": "Gabi",
+        "produto": "Croissant",
+        "quantidade": 1,
+        "preco_unitario": 6.0,
+        "valor_total": 6.0,
+        "status": "Em preparo"
+    },
+    {
+        "id": 3,
+        "cliente": "Nicolas",
+        "produto": "Mocha",
+        "quantidade": 1,
+        "preco_unitario": 10.0,
+        "valor_total": 10.0,
+        "status": "Pendente"
+    },
+    {
+        "id": 4,
+        "cliente": "Nicolas",
+        "produto": "Pão de Queijo",
+        "quantidade": 1,
+        "preco_unitario": 4.5,
+        "valor_total": 4.5,
+        "status": "Pendente"
+    }
+]
